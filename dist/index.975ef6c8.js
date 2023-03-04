@@ -512,7 +512,7 @@ console.log((0, _galeryItems.galleryItems));
 (0, _refs.refs).gallery.addEventListener("click", (0, _handlers.onGalleryItemClick));
 (0, _refs.refs).closeModalButton.addEventListener("click", (0, _handlers.onCloseModalBtnClick));
 
-},{"./galery-items":"jLAXD","./js/render-functions":"ggO39","./js/refs":"2WoF2","./js/handlers":"jlk9X"}],"jLAXD":[function(require,module,exports) {
+},{"./galery-items":"jLAXD","./js/refs":"2WoF2","./js/render-functions":"ggO39","./js/handlers":"jlk9X"}],"jLAXD":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "galleryItems", ()=>galleryItems);
@@ -594,7 +594,17 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"ggO39":[function(require,module,exports) {
+},{}],"2WoF2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "refs", ()=>refs);
+const refs = {
+    gallery: document.querySelector(".gallery"),
+    backdrop: document.querySelector(".backdrop"),
+    closeModalButton: document.querySelector(".close-modal")
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ggO39":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderGalleryMarkup", ()=>renderGalleryMarkup);
@@ -607,17 +617,7 @@ function renderGalleryMarkup(items) {
     (0, _refs.refs).gallery.insertAdjacentHTML("beforeend", createGalleryMarkup(items));
 }
 
-},{"./refs":"2WoF2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2WoF2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "refs", ()=>refs);
-const refs = {
-    gallery: document.querySelector(".gallery"),
-    backdrop: document.querySelector(".backdrop"),
-    closeModalButton: document.querySelector(".close-modal")
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jlk9X":[function(require,module,exports) {
+},{"./refs":"2WoF2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jlk9X":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "onGalleryItemClick", ()=>onGalleryItemClick);
@@ -633,7 +633,7 @@ function onCloseModalBtnClick(e) {
     (0, _modal.closeModal)();
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./modal":"aHHgN"}],"aHHgN":[function(require,module,exports) {
+},{"./modal":"aHHgN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aHHgN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "openModal", ()=>openModal);
